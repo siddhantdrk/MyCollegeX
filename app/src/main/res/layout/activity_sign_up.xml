@@ -10,7 +10,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,11 +18,11 @@
 
         <ImageView
             android:id="@+id/logo_img"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/logo"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -46,7 +46,7 @@
             android:layout_below="@id/register"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="0dp"
-            android:text="Enter your personal info to get registered"
+            android:text="Enter your info to get registered"
             android:textSize="14sp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="151dp" />
@@ -68,7 +68,10 @@
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_tab_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_tab_layout">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
