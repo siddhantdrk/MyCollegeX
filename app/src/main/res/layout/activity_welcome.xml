@@ -28,10 +28,10 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="@dimen/_120sdp"
-                android:layout_height="@dimen/_120sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="128dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:src="@drawable/logo" />
 
             <TextView
                 android:id="@+id/textView"

@@ -10,8 +10,6 @@
     </item>
 
     <item android:drawable="@drawable/splash_screen"
-        android:height="64dp"
-        android:width="64dp"
         android:gravity="center">
 
     </item>

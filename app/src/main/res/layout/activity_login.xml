@@ -25,10 +25,10 @@
 
             <ImageView
                 android:id="@+id/logo_image_view"
-                android:layout_width="@dimen/_80sdp"
+                android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_80sdp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -44,12 +44,14 @@
                 android:id="@+id/google_login_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/login_with_google_btn_border"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:text="LogIn with Google"
+                android:drawableEnd="@drawable/google"
+                android:text="Sign In with"
+                android:textColor="@color/black"
                 android:textAllCaps="false"
-                android:textSize="16sp"
-                app:cornerRadius="16dp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
