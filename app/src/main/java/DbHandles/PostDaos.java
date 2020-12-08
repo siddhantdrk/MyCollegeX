@@ -28,38 +28,61 @@ public class PostDaos {
     UsersItem users;
 
     public void addPost(String toPost) {
-        currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        if(currentUser!=null){
-            UsersDaos usersDao = new UsersDaos();
-            Task<DocumentSnapshot> task =  usersDao.getUserById(currentUser.getUid());
+//        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+//        if (currentUser != null) {
+//            UsersDaos usersDao = new UsersDaos();
+//            Task<DocumentSnapshot> task = usersDao.getUserById(currentUser.getUid());
+//
+//            task.addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                @Override
+//                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                    if (task.isSuccessful()) {
+//                        DocumentSnapshot document = task.getResult();
+//                        users = document.toObject(UsersItem.class);
+//                        Log.d("TAGUsersDao", "Display name of current user " + users.getDisplayName(), task.getException());
+//                        currentTime = Calendar.getInstance().getTimeInMillis();
+//                        post = new PostsItems();
+//                        post.setText(toPost);
+//                        post.setCreatedBy(users);
+//                        post.setCreatedAt(currentTime);
+//                        postCollection.document().set(post);
+//
+//
+//                    } else {
+//                        Log.d("TAGUsersDao", "get failed with ", task.getException());
+//                    }
+//                }
+//            });
+//
+//        }
+//        else{ }
 
-            task.addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                    if (task.isSuccessful()) {
-                        DocumentSnapshot document = task.getResult();
-                        users = document.toObject(UsersItem.class);
-                        Log.d("TAGUsersDao", "Display name of current user " + users.getDisplayName(), task.getException());
-                        currentTime = Calendar.getInstance().getTimeInMillis();
-                        post = new PostsItems();
-                        post.setText(toPost);
-                        post.setCreatedBy(users);
-                        post.setCreatedAt(currentTime);
-                        postCollection.document().set(post);
+        UsersDaos usersDao = new UsersDaos();
+        Task<DocumentSnapshot> task = usersDao.getUserById("123");
+
+        task.addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    users = document.toObject(UsersItem.class);
+                    Log.d("TAGUsersDao", "Display name of current user " + users.getDisplayName(), task.getException());
+                    currentTime = Calendar.getInstance().getTimeInMillis();
+                    post = new PostsItems();
+                    post.setText(toPost);
+                    post.setCreatedBy(users);
+                    post.setCreatedAt(currentTime);
+                    postCollection.document().set(post);
 
 
-
-                    } else {
-                        Log.d("TAGUsersDao", "get failed with ", task.getException());
-                    }
+                } else {
+                    Log.d("TAGUsersDao", "get failed with ", task.getException());
                 }
-            });
-        }
-        else{ }
-
-
+            }
+        });
 
     }
+
     public Task<DocumentSnapshot> getPostById(String PostId){
         return postCollection.document(PostId).get();
 
