@@ -16,6 +16,9 @@ public class UsersItem {
         this.imageUrl= imageUrl;
     }
 
+    public UsersItem() {
+    }
+
     public String getDisplayName() {
         return displayName;
     }

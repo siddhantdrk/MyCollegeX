@@ -7,6 +7,10 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.UserInfo;
+
+import DbHandles.UsersDaos;
+import models.UsersItem;
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton AddPost;
@@ -16,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        UsersDaos usersDaos = new UsersDaos();
+        UsersItem usersItem = new UsersItem();
+        usersItem.setCollegeEmail("xxxxemail");
+        usersItem.setContactNumber("999.....");
+        usersItem.setUid("123");
+        usersDaos.addUser(usersItem);
 
         AddPost.setOnClickListener(new View.OnClickListener() {
             @Override
