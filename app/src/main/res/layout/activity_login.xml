@@ -57,7 +57,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:text="Or use your email account"
-                android:textColor="#000"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
@@ -83,6 +83,7 @@
                         android:id="@+id/email_id"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
                         android:layout_below="@id/email_text_view"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp">
@@ -91,7 +92,6 @@
                             android:id="@+id/email_edit_text_login"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@android:color/transparent"
                             android:inputType="textEmailAddress" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,8 +117,8 @@
                             android:id="@+id/pass_edit_text_login"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
                             android:layout_marginBottom="48dp"
-                            android:background="@android:color/transparent"
                             android:inputType="textPassword" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="-20dp"
-                android:elevation="15dp"
+                android:elevation="16dp"
                 android:text="Sign In"
                 android:textAllCaps="false"
                 android:textSize="16sp"
