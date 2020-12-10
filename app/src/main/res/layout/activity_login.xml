@@ -111,10 +111,10 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:hintAnimationEnabled="false"
                         android:layout_below="@id/password_text_view"
                         android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp">
+                        android:layout_marginEnd="16dp"
+                        app:hintAnimationEnabled="false">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/pass_edit_text_login"
