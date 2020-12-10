@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         UsersDaos usersDaos = new UsersDaos();
         UsersItem usersItem = new UsersItem();
         usersItem.setCollegeEmail("xxxxemail");
-        usersItem.setContactNumber("999.....");
+        usersItem.setContactNumber("999...888");
         usersItem.setUid("123");
         usersItem.setDisplayName("XYZ");
         usersDaos.addUser(usersItem);

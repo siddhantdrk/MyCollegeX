@@ -38,6 +38,7 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
         //Utils util = new Utils();
         holder.createdAt.setText(model.getCreatedBy().getCollegeEmail());
        // DocumentSnapshot snapshot = getSnapshots().getSnapshot(holder.getAdapterPosition());
+        holder.likeCount.setText(model.getCreatedBy().getContactNumber());
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
        // String currentUserId = currentUser.getUid();
