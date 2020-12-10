@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mycollegex.R;
-import com.example.mycollegex.activity.AddDescriptionOfThing;
 import com.example.mycollegex.activity.ContactSellerActivity;
 import com.example.mycollegex.activity.MainActivity;
 import com.example.mycollegex.models.PostsItems;
@@ -43,11 +42,11 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
         holder.postNameText.setText(model.getCreatedBy().getDisplayName());
 
         if (position % 3 == 0) {
-            holder.postImage.setImageResource(R.drawable.cooler);
-        } else if (position % 3 == 1) {
             holder.postImage.setImageResource(R.drawable.laptop);
+        } else if (position % 3 == 1) {
+            holder.postImage.setImageResource(R.drawable.book);
         } else {
-
+            holder.postImage.setImageResource(R.drawable.cooler);
         }
         //Utils util = new Utils();
         // DocumentSnapshot snapshot = getSnapshots().getSnapshot(holder.getAdapterPosition());
