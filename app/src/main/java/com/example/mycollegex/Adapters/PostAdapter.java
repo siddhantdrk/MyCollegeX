@@ -1,7 +1,5 @@
 package com.example.mycollegex.Adapters;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mycollegex.activity.ContactSellerActivity;
-import com.example.mycollegex.activity.MainActivity;
 import com.example.mycollegex.R;
+import com.example.mycollegex.activity.MainActivity;
+import com.example.mycollegex.models.PostsItems;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import com.example.mycollegex.models.PostsItems;
 
 public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter.PostViewHolder> {
 
@@ -39,12 +35,19 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
 
         holder.postNameText.setText(model.getCreatedBy().getDisplayName());
 
+        if (position % 3 == 0) {
+            holder.postImage.setImageResource(R.drawable.cooler);
+        } else if (position % 3 == 1) {
+            holder.postImage.setImageResource(R.drawable.laptop);
+        } else {
+
+        }
         //Utils util = new Utils();
-       // DocumentSnapshot snapshot = getSnapshots().getSnapshot(holder.getAdapterPosition());
+        // DocumentSnapshot snapshot = getSnapshots().getSnapshot(holder.getAdapterPosition());
         holder.likeCount.setText(model.getCreatedBy().getContactNumber());
         holder.descriptionText.setText(model.getText());
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-       // String currentUserId = currentUser.getUid();
+        // String currentUserId = currentUser.getUid();
         holder.favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
