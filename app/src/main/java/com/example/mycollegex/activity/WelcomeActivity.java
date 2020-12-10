@@ -1,4 +1,4 @@
-package com.example.mycollegex;
+package com.example.mycollegex.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mycollegex.R;
 import com.google.android.material.button.MaterialButton;
 
 public class WelcomeActivity extends AppCompatActivity {

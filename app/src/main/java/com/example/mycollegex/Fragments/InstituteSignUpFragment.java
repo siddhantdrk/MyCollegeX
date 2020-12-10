@@ -23,10 +23,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Objects;
 
-import models.CollegeDetails;
+import com.example.mycollegex.models.CollegeDetails;
 
 
 public class InstituteSignUpFragment extends Fragment {

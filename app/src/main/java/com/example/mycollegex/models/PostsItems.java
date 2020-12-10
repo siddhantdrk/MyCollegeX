@@ -1,7 +1,4 @@
-package models;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.example.mycollegex.models;
 
 public class PostsItems {
     String text = "";

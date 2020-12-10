@@ -10,16 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mycollegex.ContactSellerActivity;
-import com.example.mycollegex.MainActivity;
+import com.example.mycollegex.activity.ContactSellerActivity;
+import com.example.mycollegex.activity.MainActivity;
 import com.example.mycollegex.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentSnapshot;
 
-import models.PostsItems;
+import com.example.mycollegex.models.PostsItems;
 
 public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter.PostViewHolder> {
 

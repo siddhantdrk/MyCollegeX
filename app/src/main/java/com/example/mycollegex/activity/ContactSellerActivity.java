@@ -1,4 +1,4 @@
-package com.example.mycollegex;
+package com.example.mycollegex.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.mycollegex.R;
 
 public class ContactSellerActivity extends AppCompatActivity {
 
