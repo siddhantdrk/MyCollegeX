@@ -9,8 +9,9 @@
 
     </item>
 
-    <item android:drawable="@drawable/splash_screen"
-        android:gravity="center">
+    <item
+        android:drawable="@drawable/splash_screen"
+        android:gravity="fill">
 
     </item>
 
