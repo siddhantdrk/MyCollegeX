@@ -1,4 +1,4 @@
-package com.example.mycollegex;
+package com.example.mycollegex.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import DbHandles.PostDaos;
+import com.example.mycollegex.DbHandles.PostDaos;
+import com.example.mycollegex.R;
 
 public class AddDescriptionOfThing extends AppCompatActivity {
 

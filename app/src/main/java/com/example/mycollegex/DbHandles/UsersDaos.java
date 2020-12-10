@@ -1,11 +1,11 @@
-package DbHandles;
+package com.example.mycollegex.DbHandles;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import models.UsersItem;
+import com.example.mycollegex.models.UsersItem;
 
 public class UsersDaos {
     FirebaseFirestore db = FirebaseFirestore.getInstance();

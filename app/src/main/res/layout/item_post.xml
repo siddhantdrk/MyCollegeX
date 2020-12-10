@@ -6,94 +6,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-
+    app:cardBackgroundColor="#D9C0DD"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_2sdp"
+    app:cardElevation="@dimen/_8sdp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-
-        >
-
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="51dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:id="@+id/imageProduct"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/btn_star"/>
 
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.163"
-            app:srcCompat="@mipmap/ic_launcher" />
-
-        <TextView
-            android:id="@+id/user_name"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_marginTop="16dp"
+            >
 
-            android:text="Name"
-            android:textSize="24sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.215"
-            app:layout_constraintStart_toEndOf="@+id/user_image"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_goneMarginTop="8dp" />
 
-        <TextView
-            android:id="@+id/created_At"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.215"
-            app:layout_constraintStart_toEndOf="@+id/user_image"
-            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/post_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="post"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/created_At"
-            app:layout_constraintVertical_bias="0.0" />
+                <TextView
+                    android:id="@+id/nameProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NAME"
+                    android:textSize="@dimen/_18ssp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
 
-        <ImageView
-            android:id="@+id/like_button"
-            android:layout_width="29dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/like_count_textview"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/post_text"
-            app:srcCompat="@drawable/ic_launcher_background" />
+                <TextView
+                    android:id="@+id/descriptionProduct"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This is a real good product"/>
 
-        <TextView
-            android:id="@+id/like_count_textview"
-            android:layout_width="306dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="24dp"
-            android:text="0"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/like_button"
-            app:layout_constraintTop_toBottomOf="@+id/post_text"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/favouriteButton"
+                        android:background="?android:selectableItemBackground"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:tint="@color/red"
+                        android:src="@drawable/ic_baseline_favorite_border_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/countFav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="121"
+                        android:gravity="center"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
 </androidx.cardview.widget.CardView>
