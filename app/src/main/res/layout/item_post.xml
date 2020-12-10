@@ -13,7 +13,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-
+        android:id="@+id/itemGrp"
+        android:background="?android:selectableItemBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

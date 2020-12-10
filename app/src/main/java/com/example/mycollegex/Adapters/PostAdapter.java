@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,6 +55,12 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
             }
         });
 
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
 
 
     }
@@ -71,6 +78,7 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
         TextView likeCount;
         ImageView postImage;
         ImageButton favouriteButton;
+        LinearLayout linearLayout;
 
         public PostViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -79,6 +87,7 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
             likeCount = itemView.findViewById(R.id.countFav);
             descriptionText = itemView.findViewById(R.id.descriptionProduct);
             postImage = itemView.findViewById(R.id.imageProduct);
+            linearLayout = itemView.findViewById(R.id.itemGrp);
         }
     }
 
