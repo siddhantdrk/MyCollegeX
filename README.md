@@ -1,3 +1,4 @@
+![Logo](assets/logo.png)
 # MyCollegeX
 An all in one College/Institute/University Android Application.
 
