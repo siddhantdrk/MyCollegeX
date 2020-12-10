@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         usersItem.setCollegeEmail("xxxxemail");
         usersItem.setContactNumber("999.....");
         usersItem.setUid("123");
+        usersItem.setDisplayName("XYZ");
         usersDaos.addUser(usersItem);
 
         AddPost.setOnClickListener(new View.OnClickListener() {
