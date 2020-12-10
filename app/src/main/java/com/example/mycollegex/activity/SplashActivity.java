@@ -1,4 +1,4 @@
-package com.example.mycollegex;
+package com.example.mycollegex.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

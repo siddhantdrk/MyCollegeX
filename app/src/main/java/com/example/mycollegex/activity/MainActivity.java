@@ -1,4 +1,4 @@
-package com.example.mycollegex;
+package com.example.mycollegex.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,15 +10,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mycollegex.Adapters.PostAdapter;
+import com.example.mycollegex.R;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-import DbHandles.UsersDaos;
-import models.PostsItems;
-import models.UsersItem;
+import com.example.mycollegex.DbHandles.UsersDaos;
+import com.example.mycollegex.models.PostsItems;
+import com.example.mycollegex.models.UsersItem;
 
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton AddPost;

@@ -1,4 +1,4 @@
-package models;
+package com.example.mycollegex.models;
 
 public class CollegeDetails {
 
