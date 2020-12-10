@@ -1,5 +1,7 @@
 package com.example.mycollegex.Adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mycollegex.R;
+import com.example.mycollegex.activity.AddDescriptionOfThing;
+import com.example.mycollegex.activity.ContactSellerActivity;
 import com.example.mycollegex.activity.MainActivity;
 import com.example.mycollegex.models.PostsItems;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
@@ -22,12 +26,14 @@ import com.google.firebase.auth.FirebaseUser;
 public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter.PostViewHolder> {
 
 
+    Context context;
 
 
 
-
-    public PostAdapter(@NonNull FirestoreRecyclerOptions options, MainActivity mainActivity) {
+    public PostAdapter(@NonNull FirestoreRecyclerOptions options, MainActivity mainActivity,Context context1) {
         super(options);
+
+        this.context = context1;
 
     }
 
@@ -61,7 +67,8 @@ public class PostAdapter extends FirestoreRecyclerAdapter<PostsItems,PostAdapter
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intent = new Intent(context, ContactSellerActivity.class);
+                context.startActivity(intent);
             }
         });
 

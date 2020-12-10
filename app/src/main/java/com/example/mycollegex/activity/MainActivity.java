@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 .setQuery(query, PostsItems.class)
                 .build();
 
-        adapter = new PostAdapter(options,this);
+        adapter = new PostAdapter(options,this,MainActivity.this);
         RecyclerView recyclerView = findViewById(R.id.recycler_view_post);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);

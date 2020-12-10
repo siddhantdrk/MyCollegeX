@@ -17,6 +17,7 @@
         <activity android:name=".activity.WelcomeActivity" />
         <activity android:name=".activity.AddDescriptionOfThing"/>
         <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.ContactSellerActivity"/>
         <activity
             android:name=".activity.SplashActivity"
             android:noHistory="true"
